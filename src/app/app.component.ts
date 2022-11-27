@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Ecommerce';
+  title = 'FranZket';
+
+  logo = "assets/images/logo.jpg"
 }
