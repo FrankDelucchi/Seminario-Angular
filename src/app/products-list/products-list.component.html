@@ -1,30 +1,13 @@
-<div class="container">
-    <div class="row">
-        <div class="col-3">
-            {{product.name}}
-            {{product.descprition}}
-            {{product.price}}
-            <img [src]="product.image" [alt]="product.image">
-        </div>
-        <div class="col-3">
-            {{product.name}}
-            {{product.descprition}}
-            {{product.price}}
-            <img [src]="product.image" [alt]="product.image">
-        </div>
-        <div class="col-3">
-            {{product.name}}
-            {{product.descprition}}
-            {{product.price}}
-            <img [src]="product.image" [alt]="product.image">
-        </div>
-        <div class="col-3">
-            {{product.name}}
-            {{product.descprition}}
-            {{product.price}}
-            <img [src]="product.image" [alt]="product.image">
+<div class="row">
+    <div class="col-sm-3" *ngFor="let product of products">
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <img class="img-thumbnail" [src]=product.image>
+            <p class="card-number">ARS${{product.price}}</p>
+            <a href="#" class="btn btn-primary">Add to the wish list</a>
+            </div>
         </div>
     </div>
 </div>
-
-
