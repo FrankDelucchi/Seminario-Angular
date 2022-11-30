@@ -1,1 +1,21 @@
-<p>wish-list works!</p>
+<div class="container" *ngFor="let product of wished$ | async">
+    <div class="row">
+        <div class="col-sm-9">
+            <div class="list-group">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">{{product.description}}</p>
+                        <img class="img-thumbnail" width="90" [src]=product.image> 
+                        <p class="card-number">ARS${{product.price}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"> 
+            <a><img src="assets/icons/cart-outline.jpg" alt="heart" width="30"></a>
+            <a><img src="assets/icons/trash-outline.jpg" alt="heart" width="30"></a>
+        </div>
+    </div>
+</div>
+

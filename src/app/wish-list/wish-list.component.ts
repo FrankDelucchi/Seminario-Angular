@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from '../products-list/product';
+import { WishListService } from '../wish-list.service';
 
 @Component({
   selector: 'app-wish-list',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishListComponent implements OnInit {
 
-  constructor() { }
+  wished$: Observable<Product[]>;
+  
+  constructor(private WishList: WishListService) { 
+    this.wished$ = WishList.wished.asObservable();
+  }
 
   ngOnInit(): void {
   }

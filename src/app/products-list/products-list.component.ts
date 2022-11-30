@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { product } from './product';
+import { WishListService } from '../wish-list.service';
+import { Product } from './product';
 
 @Component({
   selector: 'app-products-list',
@@ -8,7 +9,7 @@ import { product } from './product';
 })
 export class ProductsListComponent implements OnInit {
 
-  products : product [] = [
+  products : Product [] = [
     {
       name: "Zapas Nike Kobe",
       description: "The best snickers in the world",
@@ -34,9 +35,15 @@ export class ProductsListComponent implements OnInit {
       image: "assets/images/lebron-witness-5.jpg"
     },
   ]
-  constructor() { }
+  
+  constructor(private wished: WishListService) { 
+  }
 
   ngOnInit(): void {
+  }
+
+  addToWishList(product: Product): void{
+    this.wished.addToWishList(product)
   }
 
 }
