@@ -5,6 +5,10 @@ import { Product } from './products-list/Product';
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * Servicio Angular para manejar logica de negocio del Ecommerce
+ */
 export class WishListService {
   
   private _wished: Product[] = [];
