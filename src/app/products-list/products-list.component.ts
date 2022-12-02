@@ -54,7 +54,7 @@ export class ProductsListComponent implements OnInit {
       like: true,
     },
     {
-      name: "Facundo Campazo Denver Nuggets N°7",
+      name: "Campazo Denver Nuggets",
       description: "Feel in the skin of the greatest stars",
       price: 50000,
       image: "assets/images/campazo-jersey.jpg",
