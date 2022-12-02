@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { FormsModule } from '@angular/forms';
+import { LikeButtonComponent } from './like-button/like-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsListComponent,
     WishListComponent,
+    LikeButtonComponent,
   ],
   imports: [
     BrowserModule,
