@@ -16,6 +16,7 @@ export class LikeButtonComponent implements OnInit {
   product!: Product;
   
   ngOnInit(): void {
+    
   }
 
   addToWishList(product: Product): void{
